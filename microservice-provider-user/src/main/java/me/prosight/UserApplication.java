@@ -2,17 +2,16 @@ package me.prosight;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
  * Created by elton on 2017/2/5.
- * Eureka 服务发现服务器
  */
 
 @SpringBootApplication
-@EnableEurekaServer
-public class EurekaApplication {
+@EnableDiscoveryClient
+public class UserApplication {
     public static void main(String[] args) {
-        SpringApplication.run(EurekaApplication.class, args);
+        SpringApplication.run(UserApplication.class, args);
     }
 }
