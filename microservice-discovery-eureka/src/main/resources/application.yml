@@ -4,6 +4,9 @@ server:
 eureka:
   instance:
     hostname: discovery         # 指定该Eureka实例的主机名
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 4000
   client:
     registerWithEureka: false
     fetchRegistry: false
