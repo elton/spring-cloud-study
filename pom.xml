@@ -18,13 +18,14 @@
         <module>microservice-config-server</module>
         <module>microservice-config-client</module>
         <module>microservice-api-gateway</module>
+        <module>microservice-consumer-movie-feign</module>
     </modules>
 
     <!-- 使用最新的spring-boot版本 -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.4.0.RELEASE</version>
+        <version>1.4.4.RELEASE</version>
     </parent>
 
     <properties>
@@ -50,6 +51,18 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <plugin>
+      				<groupId>org.codehaus.mojo</groupId>
+      				<artifactId>cobertura-maven-plugin</artifactId>
+      				<version>2.7</version>
+      				<configuration>
+      					<formats>
+      						<format>html</format>
+      						<format>xml</format>
+      					</formats>
+      					<check />
+      				</configuration>
+      			</plugin>
         </plugins>
     </build>
 
